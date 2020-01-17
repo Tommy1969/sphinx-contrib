@@ -14,8 +14,7 @@ from xml.dom import minidom
 from docutils import nodes, utils
 from docutils.parsers.rst import directives
 
-from sphinx.util.compat import Directive
-
+from docutils.parsers.rst import Directive
 
 def spec_float(argument):
     """
