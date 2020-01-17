@@ -9,7 +9,6 @@
 
 import re
 import urllib
-import urllib2
 from xml.dom import minidom
 
 from docutils import nodes, utils
@@ -108,7 +107,7 @@ def visit_googlemaps_node(self, node):
                         marginwidth="0" src="%s">
                 </iframe>"""
 
-    url = baseurl + urllib.urlencode(params)
+    url = baseurl + urllib.parse.urlencode(params)
     self.body.append(iframe % url)
 
 
